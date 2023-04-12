@@ -1,15 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import Slider from '../../components/Slider'
 
 import s from "./AboutPage.module.scss"
 
 function AboutPage() {
   return (
     <div>
-      AboutPage
+      <div className={s.header}>Header</div>
 
-      <Link to="/news">to news</Link>
-      <Link to="/about">to about</Link>
+      <div className={s.main}>
+        <Slider />
+      </div>
+
+      <div className={s.footer}>Footer</div>
     </div>
   )
 }
