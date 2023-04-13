@@ -11,9 +11,22 @@ $footerHeight: 100px;
 .main {
   min-height: calc(var(--height, 100vh) - $headerHeight - $footerHeight);
 
-  .container{
+  .container {
     @include container();
   }
+}
+
+.grid {
+  @include container();
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+  gap: 20px;
+  padding-bottom: 40px;
+
+  // @media (max-width: 800px) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
 }
 
 .footer {
